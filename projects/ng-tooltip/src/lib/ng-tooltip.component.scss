@@ -1,0 +1,71 @@
+.tooltip {
+  position: fixed;
+  background-color: var(--ion-color-dark);
+  border-radius: 4px;
+  color: var(--ion-color-light);
+  font-family: Arial;
+  padding: 3px 6px;
+  font-size: 13px;
+  transform: translateX(-50%);
+  width: fit-content;
+  white-space: nowrap;
+
+  &.hide {
+    visibility: hidden;
+  }
+  &.bottom-center {
+    margin-top: 5px;
+  }
+  &.top-center {
+    margin-bottom: 5px;
+  }
+  &.right {
+    margin-left: 5px;
+  }
+  &.left {
+    margin-right: 5px;
+  }
+
+  &::before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+  }
+
+  &.bottom-center::before {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid var(--ion-color-dark);
+    left: 50%;
+    top: -5px;
+    transform: translateX(-50%);
+  }
+
+  &.top-center::before {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid var(--ion-color-dark);
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+  }
+
+  &.right::before {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid var(--ion-color-dark);
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &.left::before {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid var(--ion-color-dark);
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
