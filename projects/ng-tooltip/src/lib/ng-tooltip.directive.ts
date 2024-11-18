@@ -17,6 +17,7 @@ import { NgTooltipComponent } from './ng-tooltip.component';
 })
 export class NgTooltipDirective {
   @Input() tooltipText = '';
+  @Input() tooltipClass = '';
 
   private tooltipComponent: ComponentRef<any> | undefined;
   constructor(
@@ -51,6 +52,7 @@ export class NgTooltipDirective {
     if (!this.tooltipComponent || !this.tooltipComponent.instance) return;
 
     this.tooltipComponent.instance.text = this.tooltipText;
+    this.tooltipComponent.instance.class = this.tooltipClass;
     this.appRef.attachView(this.tooltipComponent.hostView);
     this.document.body.appendChild(
       this.tooltipComponent.location.nativeElement

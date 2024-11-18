@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 
 @Component({
   selector: 'ng-tooltip',
@@ -10,4 +10,10 @@ export class NgTooltipComponent {
   @Input() left = 0;
   @Input() top = 0;
   @Input() positionClass = 'hide';
+  @Input() class!: string;
+
+  @HostBinding('class') get hostClass() {
+    if (this.class) return this.class;
+    else return '';
+  }
 }
