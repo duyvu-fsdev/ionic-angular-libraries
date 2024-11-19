@@ -6,6 +6,8 @@
 
 ### Automatically adjusts its position when overflowing the screen
 
+![tooltip](https://github.com/user-attachments/assets/d223a674-6b1b-4f25-8194-dc09c737c05e)
+
 ## Installation
 
 ```bash
