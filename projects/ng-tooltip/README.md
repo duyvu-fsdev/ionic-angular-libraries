@@ -6,6 +6,8 @@
 
 ### Automatically adjusts its position when overflowing the screen
 
+![tooltip](https://github.com/user-attachments/assets/d223a674-6b1b-4f25-8194-dc09c737c05e)
+
 ## Installation
 
 ```bash
@@ -49,7 +51,7 @@ import css **_important_**
 
 "styles": [
  ...,
- "node_modules/ng-tooltip/ng-tooltip.component.scss"
+ "node_modules/@duyvq/ng-tooltip-directive/styles/ng-tooltip.component.scss"
 ]
 ```
 
@@ -58,7 +60,7 @@ or
 ```python
 /* global.scss */
 
-@import '~ng-tooltip/ng-tooltip.component.scss';
+@import 'node_modules/@duyvq/ng-tooltip-directive/styles/ng-tooltip.component.scss';
 ```
 
 You can also customize the CSS by defining CSS variables in the global.scss
@@ -107,3 +109,9 @@ tooltipClass="custom-css"
  <ion-icon name="trash-outline"></ion-icon>
 </ion-button>
 ```
+
+##
+
+## Author
+
+[duyvu.fsdev](https://github.com/duyvu-fsdev)

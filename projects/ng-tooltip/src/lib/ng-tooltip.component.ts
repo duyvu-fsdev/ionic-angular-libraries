@@ -13,7 +13,7 @@ export class NgTooltipComponent {
   @Input() class!: string;
 
   @HostBinding('class') get hostClass() {
-    if (this.class) return this.class;
-    else return '';
+    if (this.class) return `tooltip-container ${this.class}`;
+    else return 'tooltip-container';
   }
 }
