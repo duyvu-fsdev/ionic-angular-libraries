@@ -1,16 +1,12 @@
 # @duyvq/ng-tooltip-directive
 
-### Tooltip for Angular, Ionic/Angular projects.
+## Introduce
 
-### Automatically reposition if content overflows
+### Tooltip designed for Angular and Ionic/Angular applications.
+
+### Automatically adjusts its position when overflowing the screen
 
 ## Installation
-
-```bash
-npm install @duyvq/ng-tooltip
-```
-
-or
 
 ```bash
 npm install @duyvq/ng-tooltip-directive
@@ -21,66 +17,93 @@ npm install @duyvq/ng-tooltip-directive
 ### declare in NgModule
 
 ```python
+component.module.ts
+--------
 import { TooltipModule } from '@duyvq/ng-tooltip-directive';
 
 @NgModule({
-  declarations: [...],
   imports: [..., TooltipModule],
-  exports: [....],
-  providers: [],
 })
+
+export class YourModule {}
 ```
 
-### in template
+### In template
 
 ```python
 <element
-	tooltip
-	tooltipText="tooltipText"
-	tooltipClass="custom-css"
+ tooltip
+ tooltipText="tooltipText"
+ tooltipClass="custom-css"
 >
 	///
 </element>
 ```
 
-### css
+### css configuration
+
+import css **_important_**
 
 ```python
+/* angular.json */
 
-.tooltip-container {
-  --tooltip-background :
-  --tooltip-color :
-  --tooltip-border-radius :
-  --tooltip-padding:
-  --tooltip-width :
-  --tooltip-height :
-}
-
+"styles": [
+ ...,
+ "node_modules/ng-tooltip/ng-tooltip.component.scss"
+]
 ```
 
 or
 
 ```python
+/* global.scss */
 
-Customize with the className passed into tooltipClass
+@import '~ng-tooltip/ng-tooltip.component.scss';
+```
 
-...
+You can also customize the CSS by defining CSS variables in the global.scss
+
+```python
+/* global.scss */
+
+ng-tooltip.tooltip-container {
+ --tooltip-background: #fff;
+ --tooltip-color: #000;
+ --tooltip-border-radius: 4px;
+ --tooltip-padding: 8px;
+ --tooltip-width: auto;
+ --tooltip-height: auto;
+}
+```
+
+Or use a custom class by passing it in via the tooltipClass property
+
+```bash
 tooltipClass="custom-css"
+```
+
+```python
+/* global.scss */
 
 .custom-css {
- ...
+ background: #f00;
+ color: #fff;
+ padding: 10px;
+ border-radius: 8px;
 }
-
 ```
 
 ## Example
 
+### Here is an example of usage in an Ionic app
+
 ```python
 <ion-button
-	tooltip
-	tooltipText="delete"
-	color="danger"
+ tooltip
+ tooltipText="delete"
+ tooltipClass="custom-css"
+ color="danger"
 >
-	<ion-icon name="trash-outline"></ion-icon>
+ <ion-icon name="trash-outline"></ion-icon>
 </ion-button>
 ```

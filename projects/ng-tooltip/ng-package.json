@@ -3,5 +3,6 @@
   "dest": "../../dist/ng-tooltip",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "assets": ["styles/ng-tooltip.component.scss"]
 }
