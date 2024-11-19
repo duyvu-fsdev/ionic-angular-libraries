@@ -1,16 +1,24 @@
 {
-  "name": "@duyvq/ng-tooltip-directive",
-  "version": "1.0.5",
+  "name": "@ng-tooltip/ng-tooltip",
+  "version": "0.0.3",
   "author": {
     "name": "duyvu.fsdev",
     "email": "duyvu.fullstackdev@gmail.com"
   },
-  "description": "Tooltip for Angular, Ionic/Angular projects.",
+  "description": "Tooltip designed for Angular and Ionic/Angular applications.",
   "keywords": [
     "tooltip",
     "angular",
     "ionic",
-    "ui-library"
+    "ui-library",
+    "tooltip-ionic",
+    "tooltip-angular",
+    "angular-tooltip",
+    "ionic-tooltip",
+    "tooltip-directive",
+    "ng-tooltip",
+    "@ng-tooltip",
+    "duyvu.fsdev"
   ],
   "peerDependencies": {
     "@angular/common": "^18.2.0",

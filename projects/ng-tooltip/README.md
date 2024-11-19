@@ -1,4 +1,4 @@
-# @duyvq/ng-tooltip-directive
+# @ng-tooltip/ng-tooltip
 
 ## Introduce
 
@@ -11,7 +11,7 @@
 ## Installation
 
 ```bash
-npm install @duyvq/ng-tooltip-directive
+npm i @ng-tooltip/ng-tooltip
 ```
 
 ## Usage
@@ -19,9 +19,9 @@ npm install @duyvq/ng-tooltip-directive
 ### declare in NgModule
 
 ```python
-component.module.ts
---------
-import { TooltipModule } from '@duyvq/ng-tooltip-directive';
+/* YourModule.module.ts */
+
+import { TooltipModule } from '@ng-tooltip/ng-tooltip';
 
 @NgModule({
   imports: [..., TooltipModule],
@@ -51,7 +51,7 @@ import css **_important_**
 
 "styles": [
  ...,
- "node_modules/@duyvq/ng-tooltip-directive/styles/ng-tooltip.component.scss"
+ "node_modules/@ng-tooltip/ng-tooltip/styles/ng-tooltip.component.scss"
 ]
 ```
 
@@ -60,7 +60,7 @@ or
 ```python
 /* global.scss */
 
-@import 'node_modules/@duyvq/ng-tooltip-directive/styles/ng-tooltip.component.scss';
+@import 'node_modules/@ng-tooltip/ng-tooltip/styles/ng-tooltip.component.scss';
 ```
 
 You can also customize the CSS by defining CSS variables in the global.scss
