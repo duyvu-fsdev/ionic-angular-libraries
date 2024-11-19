@@ -1,10 +1,10 @@
 # @ng-tooltip/ng-tooltip
 
-## Introduce
+## Introduction
 
-### Tooltip designed for Angular and Ionic/Angular applications.
+### A Tooltip designed for Angular and Ionic/Angular applications.
 
-### Automatically adjusts its position when overflowing the screen
+### Automatically adjusts its position when overflowing the screen.
 
 ![tooltip](https://github.com/user-attachments/assets/d223a674-6b1b-4f25-8194-dc09c737c05e)
 
@@ -12,6 +12,20 @@
 
 ```bash
 npm i @ng-tooltip/ng-tooltip
+```
+
+### If you encounter a dependency conflict with the required version of @angular/common, you can fix it by:
+
+Upgrading @angular/common:
+
+```bash
+ng update @angular/core @angular/cli
+```
+
+Or using the --legacy-peer-deps flag if upgrading Angular is not possible:
+
+```bash
+npm install @ng-tooltip/ng-tooltip --legacy-peer-deps
 ```
 
 ## Usage
@@ -63,7 +77,7 @@ or
 @import 'node_modules/@ng-tooltip/ng-tooltip/styles/ng-tooltip.component.scss';
 ```
 
-You can also customize the CSS by defining CSS variables in the global.scss
+You can also customize the CSS by defining CSS variables in the global.scss file
 
 ```python
 /* global.scss */
