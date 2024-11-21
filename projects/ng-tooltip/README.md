@@ -1,41 +1,57 @@
-# @ng-tooltip/ng-tooltip
+## ng-tooltip
 
-## Introduction
+### Overview
 
-### A Tooltip designed for Angular and Ionic/Angular applications.
+#### ng-tooltip is a versatile and customizable tooltip library for Angular and Ionic/Angular applications. Its key feature is its ability to reposition itself dynamically when overflowing the screen.
 
-### Automatically adjusts its position when overflowing the screen.
+##
+
+### Features
+
+**- Dynamic positioning: Automatically adjusts when overflowing screen boundaries.**
 
 ![tooltip](https://github.com/user-attachments/assets/d223a674-6b1b-4f25-8194-dc09c737c05e)
 
-## Installation
+**- Customizable styles: Modify styles using CSS variables or custom classes.**
+
+**- Seamless integration: Works well with Angular and Ionic applications.**
+
+##
+
+### Installation
+
+**Run the following command to install the library**
 
 ```bash
-npm i @ng-tooltip/ng-tooltip
+npm install @duyvu-fsdev/ng-tooltip
 ```
 
-### If you encounter a dependency conflict with the required version of @angular/common, you can fix it by:
+#### _If you encounter a dependency conflict with the required version of @angular/common, you can fix it by:_
 
-Upgrading @angular/common:
+##### _Upgrading @angular/common:_
 
 ```bash
 ng update @angular/core @angular/cli
 ```
 
-Or using the --legacy-peer-deps flag if upgrading Angular is not possible:
+##### _Or using the --legacy-peer-deps flag if upgrading Angular is not possible:_
 
 ```bash
-npm install @ng-tooltip/ng-tooltip --legacy-peer-deps
+npm install @duyvu-fsdev/ng-tooltip --legacy-peer-deps
 ```
 
-## Usage
+##
 
-### declare in NgModule
+### Usage
+
+**1. Import the module**
+
+##### Add TooltipModule to your module:
 
 ```python
-/* YourModule.module.ts */
+/* *.module.ts */
 
-import { TooltipModule } from '@ng-tooltip/ng-tooltip';
+import { TooltipModule } from '@duyvu-fsdev/ng-tooltip';
 
 @NgModule({
   imports: [..., TooltipModule],
@@ -44,7 +60,9 @@ import { TooltipModule } from '@ng-tooltip/ng-tooltip';
 export class YourModule {}
 ```
 
-### In template
+**2. Add the tooltip to your template**
+
+##### Use the tooltip directive and configure properties such as tooltipText and tooltipClass
 
 ```python
 <element
@@ -52,20 +70,22 @@ export class YourModule {}
  tooltipText="tooltipText"
  tooltipClass="custom-css"
 >
-	///
+ <!-- Element content -->
 </element>
 ```
 
-### css configuration
+##
 
-import css **_important_**
+### CSS Configuration
+
+**1. Import default styles** **[_important_]**
 
 ```python
 /* angular.json */
 
 "styles": [
  ...,
- "node_modules/@ng-tooltip/ng-tooltip/styles/ng-tooltip.component.scss"
+ "node_modules/@duyvu-fsdev/ng-tooltip/styles/ng-tooltip.component.scss"
 ]
 ```
 
@@ -74,10 +94,12 @@ or
 ```python
 /* global.scss */
 
-@import 'node_modules/@ng-tooltip/ng-tooltip/styles/ng-tooltip.component.scss';
+@import 'node_modules/@duyvu-fsdev/ng-tooltip/styles/ng-tooltip.component.scss';
 ```
 
-You can also customize the CSS by defining CSS variables in the global.scss file
+**2. Customize using CSS variables**
+
+##### Modify variables directly in global.scss to change the tooltip's appearance globally
 
 ```python
 /* global.scss */
@@ -92,7 +114,7 @@ ng-tooltip.tooltip-container {
 }
 ```
 
-Or use a custom class by passing it in via the tooltipClass property
+##### Pass a class name through tooltipClass and define its styles in your global CSS
 
 ```bash
 tooltipClass="custom-css"
@@ -109,9 +131,11 @@ tooltipClass="custom-css"
 }
 ```
 
-## Example
+##
 
-### Here is an example of usage in an Ionic app
+### Example
+
+**Here is an example of usage in an Ionic app**
 
 ```python
 <ion-button
@@ -126,6 +150,18 @@ tooltipClass="custom-css"
 
 ##
 
-## Author
+### Demo
 
-[duyvu.fsdev](https://github.com/duyvu-fsdev)
+![Demo](https://codesandbox.io/static/img/play-codesandbox.svg) (updating...)
+
+##
+
+#### License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+##
+
+### Author
+
+##### Developed and maintained by [duyvu-fsdev](https://github.com/duyvu-fsdev)

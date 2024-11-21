@@ -3,7 +3,7 @@ import { Component, HostBinding, Input } from '@angular/core';
 @Component({
   selector: 'ng-tooltip',
   templateUrl: './ng-tooltip.component.html',
-  styleUrls: ['../../styles/ng-tooltip.component.scss'],
+  styleUrls: ['../../styles/ng-tooltip.scss'],
 })
 export class NgTooltipComponent {
   @Input() text = '';
